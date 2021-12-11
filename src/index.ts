@@ -6,6 +6,11 @@
  */
 import init, { add } from 'wasm_crate';
 
+
+const addTS = (a: number, b: number) => {
+    return a + b;
+}
+
 const main = async () => {
     await init();
 
@@ -15,3 +20,5 @@ const main = async () => {
 main().catch((err) => {
     console.error(err);
 });
+
+export {addTS};
